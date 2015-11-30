@@ -11,6 +11,7 @@
 		<module>mower-core</module>
 		<module>mower-controller</module>
 		<module>mower-operator</module>
+		<module>mower-operator-cmd</module>
 	</modules>
 
 	<properties>
@@ -43,6 +44,11 @@
 			<dependency>
 				<groupId>fr.xebia.mower</groupId>
 				<artifactId>mower-controller</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>fr.xebia.mower</groupId>
+				<artifactId>mower-operator</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
