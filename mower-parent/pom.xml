@@ -10,9 +10,11 @@
 	<modules>
 		<module>mower-core</module>
 		<module>mower-controller</module>
+		<module>mower-operator</module>
 	</modules>
 
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<version.junit>4.12</version.junit>
 	</properties>
 
@@ -34,6 +36,16 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
+				<groupId>fr.xebia.mower</groupId>
+				<artifactId>mower-core</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>fr.xebia.mower</groupId>
+				<artifactId>mower-controller</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
 				<version>${version.junit}</version>
@@ -42,7 +54,7 @@
 		</dependencies>
 	</dependencyManagement>
 
-	<!-- All modules require junit -->
+	<!-- All modules depend on junit -->
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
